@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1/jwt-encoding-system")
 @Tag(name = "JWT Encoding System API", description = "System for encoding/decoding and verifying JWT tokens")
