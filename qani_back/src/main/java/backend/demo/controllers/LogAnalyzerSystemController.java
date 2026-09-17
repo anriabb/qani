@@ -13,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1/log-analyzer-system")
 @Tag(name = "Log Analyzer System API", description = "Upload log files (.log, .txt) to parse log levels, top errors, and security anomalies")
