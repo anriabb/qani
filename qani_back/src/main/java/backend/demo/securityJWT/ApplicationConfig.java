@@ -26,14 +26,6 @@ public class ApplicationConfig {
         this.userRepository = userRepository;
     }
 
-    public String generateToken(Map<String, Object> claims, UserDetails userDetails) {
-        if (userDetails instanceof Users) {
-            Users user = (Users) userDetails;
-            claims.put("userId", user.getId());
-        }
-        return generateToken(claims, userDetails);
-    }
-
     @Bean
     public UserDetailsService userDetailsService() {
         return username -> (Users) userRepository.findByUsername(username)
