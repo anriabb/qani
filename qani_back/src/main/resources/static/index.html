@@ -34,61 +34,37 @@
         .card {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
         }
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col transition-colors duration-200" id="appBody">
 
     <!-- Header -->
 <header class="sticky top-0 z-50 bg-white border-b border-slate-200 transition-colors duration-200" id="appHeader">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6">
-        <nav class="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4 py-2 text-sm font-semibold text-slate-600" id="navContainer">
+    <div class="max-w-7xl mx-auto px-6">
+        <nav class="flex items-center justify-between gap-4 py-2 text-sm font-semibold text-slate-600" id="navContainer">
 
-            <!-- Top Row on Mobile: Logo & Right Controls -->
-            <div class="w-full flex items-center justify-between md:w-auto">
-                <!-- Logo -->
-                <a href="index.html"
-                   class="flex items-center space-x-1 p-1 rounded-xl flex-shrink-0 cursor-pointer overflow-hidden">
-                    <img src="images/QANI.png"
-                         alt="Qani Logo"
-                         class="h-8 sm:h-10 w-auto rounded-lg object-contain">
-                </a>
+            <!-- Logo -->
+            <a href="index.html"
+               class="flex items-center space-x-1 p-1 rounded-xl flex-shrink-0 cursor-pointer overflow-hidden">
+                <img src="images/QANI.png"
+                     alt="Qani Logo"
+                     class="h-10 w-auto rounded-lg object-contain">
+            </a>
 
-                <!-- RIGHT SIDE (Mobile Visible Inline with Logo) -->
-                <div class="flex items-center space-x-2 md:hidden">
-                    <button
-                        onclick="toggleTheme()"
-                        id="themeToggleBtnMobile"
-                        class="p-1.5 rounded-lg text-slate-600 font-bold text-[10px] uppercase tracking-wider hover:bg-slate-100 transition-colors"
-                        title="Toggle Light/Dark Mode">
-                        <span id="themeTextMobile">DARK</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Navigation Links (Scrollable on Mobile) -->
-            <div class="w-full md:w-auto flex items-center space-x-1 sm:space-x-2 overflow-x-auto no-scrollbar py-1 px-1">
+            <div class="flex items-center space-x-1 sm:space-x-2 flex-wrap">
 
                 <!-- CIPHERS -->
-                <div class="relative group py-1 flex-shrink-0">
+                <div class="relative group py-2">
 
                     <div class="flex items-center">
                         <a href="ciphers.html"
-                           class="nav-btn px-2.5 sm:px-3 py-1.5 rounded-l-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600 text-xs sm:text-sm">
+                           class="nav-btn px-3 py-1.5 rounded-l-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
                             Ciphers
                         </a>
 
                         <button type="button"
-                                class="px-1 py-1.5 rounded-r-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
-                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                class="px-1.5 py-1.5 rounded-r-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -209,23 +185,23 @@
 
                 <!-- FILE CHECKER -->
                 <a href="filecheck.html"
-                   class="nav-btn px-2.5 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 whitespace-nowrap transition-colors text-slate-600 text-xs sm:text-sm flex-shrink-0">
+                   class="nav-btn px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 whitespace-nowrap transition-colors text-slate-600">
                     File Checker
                 </a>
 
 
                 <!-- INSPECTOR -->
-                <div class="relative group py-1 flex-shrink-0">
+                <div class="relative group py-2">
 
                     <div class="flex items-center">
                         <a href="inspect.html"
-                           class="nav-btn px-2.5 sm:px-3 py-1.5 rounded-l-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600 text-xs sm:text-sm">
+                           class="nav-btn px-3 py-1.5 rounded-l-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
                             Inspector
                         </a>
 
                         <button type="button"
-                                class="px-1 py-1.5 rounded-r-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
-                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                class="px-1.5 py-1.5 rounded-r-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -254,17 +230,17 @@
 
 
                 <!-- ANALYZE -->
-                <div class="relative group py-1 flex-shrink-0">
+                <div class="relative group py-2">
 
                     <div class="flex items-center">
                         <a href="analyze.html"
-                           class="nav-btn px-2.5 sm:px-3 py-1.5 rounded-l-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600 text-xs sm:text-sm">
+                           class="nav-btn px-3 py-1.5 rounded-l-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
                             Analyze
                         </a>
 
                         <button type="button"
-                                class="px-1 py-1.5 rounded-r-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
-                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                class="px-1.5 py-1.5 rounded-r-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -294,23 +270,23 @@
 
                 <!-- PASSWORD GENERATOR -->
                 <a href="passgen.html"
-                   class="nav-btn px-2.5 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 whitespace-nowrap transition-colors text-slate-600 text-xs sm:text-sm flex-shrink-0">
+                   class="nav-btn px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 whitespace-nowrap transition-colors text-slate-600">
                     Password Generator
                 </a>
 
 
                 <!-- STANDARDS -->
-                <div class="relative group py-1 flex-shrink-0">
+                <div class="relative group py-2">
 
                     <div class="flex items-center">
                         <a href="standards.html"
-                           class="nav-btn px-2.5 sm:px-3 py-1.5 rounded-l-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600 text-xs sm:text-sm">
+                           class="nav-btn px-3 py-1.5 rounded-l-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
                             Standards
                         </a>
 
                         <button type="button"
-                                class="px-1 py-1.5 rounded-r-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
-                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                class="px-1.5 py-1.5 rounded-r-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -345,18 +321,18 @@
             </div>
 
 
-            <!-- RIGHT SIDE (Desktop Controls) -->
-            <div class="w-full md:w-auto flex items-center justify-between md:justify-end space-x-2 sm:space-x-3 pt-1 md:pt-0 border-t md:border-t-0 border-slate-100">
+            <!-- RIGHT SIDE -->
+            <div class="flex items-center space-x-3 ml-auto">
 
                 <button
                     onclick="toggleTheme()"
                     id="themeToggleBtn"
-                    class="hidden md:block p-2 rounded-lg text-slate-600 font-bold text-xs uppercase tracking-wider hover:bg-slate-100 transition-colors"
+                    class="p-2 rounded-lg text-slate-600 font-bold text-xs uppercase tracking-wider hover:bg-slate-100 transition-colors"
                     title="Toggle Light/Dark Mode">
                     <span id="themeText">DARK MODE</span>
                 </button>
 
-                <div class="relative w-full md:w-64 flex-shrink-0">
+                <div class="relative w-48 sm:w-64 flex-shrink-0">
 
                     <input
                         type="text"
@@ -380,87 +356,87 @@
 
 
     <!-- Main Content Container -->
-    <main class="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-6 space-y-6 sm:space-y-10">
+    <main class="flex-1 max-w-7xl w-full mx-auto p-6 space-y-10">
 
         <!-- Ads/Hero Banner Section (Consistently Blue/Dark in Both Modes) -->
-        <section class="relative bg-slate-900 rounded-2xl px-10 sm:px-14 md:px-16 py-10 md:py-16 text-white shadow-xl overflow-hidden border border-slate-800" id="heroBanner">
+        <section class="relative bg-slate-900 rounded-2xl px-8 py-12 md:py-16 text-white shadow-xl overflow-hidden border border-slate-800" id="heroBanner">
             <!-- Left Arrow Button -->
-            <button onclick="prevSlide()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-slate-800/80 hover:bg-slate-700 text-white p-2 sm:p-3 rounded-full transition-all border border-slate-700 focus:outline-none">
-                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-slate-800/80 hover:bg-slate-700 text-white p-3 rounded-full transition-all border border-slate-700 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
             </button>
 
             <!-- Right Arrow Button -->
-            <button onclick="nextSlide()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-slate-800/80 hover:bg-slate-700 text-white p-2 sm:p-3 rounded-full transition-all border border-slate-700 focus:outline-none">
-                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-slate-800/80 hover:bg-slate-700 text-white p-3 rounded-full transition-all border border-slate-700 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
             </button>
 
             <!-- Carousel Content Container -->
-            <div class="max-w-3xl mx-auto text-center transition-all duration-500 min-h-[240px] sm:min-h-[260px] md:min-h-[280px] flex flex-col justify-center items-center space-y-2.5 sm:space-y-3">
-                <span id="slideTag" class="inline-block px-3.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+            <div class="max-w-3xl mx-auto text-center px-8 transition-all duration-500 min-h-[260px] md:min-h-[280px] flex flex-col justify-center items-center space-y-3">
+                <span id="slideTag" class="inline-block px-3.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-xs font-bold uppercase tracking-widest">
                     Cryptography & Encoding
                 </span>
-                <h2 id="slideTitle" class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                <h2 id="slideTitle" class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
                     Ciphers, Hashes & JWT Processing
                 </h2>
-                <p id="slideDesc" class="text-slate-300 text-xs sm:text-base md:text-lg leading-relaxed max-w-2xl pt-1 sm:pt-2">
+                <p id="slideDesc" class="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl pt-2">
                     Encode, decode, and generate hash values instantly. Supports SHA-256, SHA-512, Base64, Hex, Binary, ASCII, Caesar Ciphers, and JSON Web Tokens (JWT).
                 </p>
             </div>
 
             <!-- Carousel Pagination Dots -->
-            <div class="flex justify-center space-x-2.5 mt-6 sm:mt-8" id="dotsContainer">
-                <button onclick="goToSlide(0)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white transition-all"></button>
-                <button onclick="goToSlide(1)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-slate-700 transition-all"></button>
-                <button onclick="goToSlide(2)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-slate-700 transition-all"></button>
-                <button onclick="goToSlide(3)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-slate-700 transition-all"></button>
+            <div class="flex justify-center space-x-2.5 mt-8" id="dotsContainer">
+                <button onclick="goToSlide(0)" class="w-3 h-3 rounded-full bg-white transition-all"></button>
+                <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
+                <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
+                <button onclick="goToSlide(3)" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
             </div>
         </section>
 
         <!-- Divider Line -->
-        <hr class="border-slate-200 my-6 sm:my-8 transition-colors duration-200" id="divider1">
+        <hr class="border-slate-200 my-8 transition-colors duration-200" id="divider1">
 
         <!-- Interactive Metric & Counter Cards Section -->
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="card p-4 sm:p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm" id="metric1">
-                <div class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider">Available Tools</div>
-                <div class="text-xl sm:text-2xl md:text-3xl font-extrabold mt-1.5 sm:mt-2 text-slate-900" id="metricVal1">18+</div>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-1">Security & Forensics Utilities</p>
+            <div class="card p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm" id="metric1">
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Available Tools</div>
+                <div class="text-1xl md:text-3xl font-extrabold mt-2 text-slate-900" id="metricVal1">18+</div>
+                <p class="text-xs text-slate-400 mt-1">Security & Forensics Utilities</p>
             </div>
 
-            <div class="card p-4 sm:p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm" id="metric2">
-                <div class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider">Data Privacy</div>
-                <div class="text-xl sm:text-2xl md:text-3xl font-extrabold mt-1.5 sm:mt-2 text-slate-900" id="metricVal2">100%</div>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-1">Client-Side Processing</p>
+            <div class="card p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm" id="metric2">
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Data Privacy</div>
+                <div class="text-1xl md:text-3xl font-extrabold mt-2 text-slate-900" id="metricVal2">100%</div>
+                <p class="text-xs text-slate-400 mt-1">Client-Side Processing</p>
             </div>
 
-            <div class="card p-4 sm:p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm" id="metric3">
-                <div class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider">Execution Time</div>
-                <div class="text-xl sm:text-2xl md:text-3xl font-extrabold mt-1.5 sm:mt-2 text-slate-900" id="metricVal3">&lt; 10ms</div>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-1">Near Instant Results</p>
+            <div class="card p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm" id="metric3">
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Execution Time</div>
+                <div class="text-1xl md:text-3xl font-extrabold mt-2 text-slate-900" id="metricVal3">&lt; 10ms</div>
+                <p class="text-xs text-slate-400 mt-1">Near Instant Results</p>
             </div>
 
-            <div class="card p-4 sm:p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm" id="metric4">
-                <div class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider">Platform Status</div>
-                <div class="text-xl sm:text-2xl md:text-3xl font-extrabold mt-1.5 sm:mt-2 text-emerald-400" id="metricVal4">Operational</div>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-1">All Systems Active</p>
+            <div class="card p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm" id="metric4">
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Platform Status</div>
+                <div class="text-2xl md:text-1xl font-extrabold mt-2 text-emerald-400" id="metricVal4">Operational</div>
+                <p class="text-xs text-slate-400 mt-1">All Systems Active</p>
             </div>
         </section>
 
         <!-- Divider Line -->
-        <hr class="border-slate-200 my-6 sm:my-8 transition-colors duration-200" id="divider2">
+        <hr class="border-slate-200 my-8 transition-colors duration-200" id="divider2">
 
         <!-- Short Centered Paragraph Section -->
-        <section class="max-w-3xl mx-auto text-center space-y-3 sm:space-y-4 px-2 sm:px-4">
-            <h2 class="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-slate-900" id="aboutHeading">
+        <section class="max-w-3xl mx-auto text-center space-y-4 px-4">
+            <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-900" id="aboutHeading">
                 What is Qani?
             </h2>
-            <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed" id="aboutText">
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed" id="aboutText">
                 <strong>Qani</strong> is a streamlined web-based utility platform built for SOC analysts, incident responders, developers, and security enthusiasts. It provides essential tools—such as encoding conversion, JWT decoding, threat URL/IP lookup, file hash identification, PCAP and log file analysis, and strong key generation—directly in one unified interface.
             </p>
-            <div class="flex flex-wrap justify-center gap-2 pt-2 text-[11px] sm:text-xs font-bold text-slate-700">
-                <span class="bg-slate-200 px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-300" id="tag1">Full Cryptography</span>
-                <span class="bg-slate-200 px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-300" id="tag2">Network & Log Parsing</span>
-                <span class="bg-slate-200 px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-300" id="tag3">Client-Side Utilities</span>
+            <div class="flex flex-wrap justify-center gap-2 pt-2 text-xs font-bold text-slate-700">
+                <span class="bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-300" id="tag1">Full Cryptography</span>
+                <span class="bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-300" id="tag2">Network & Log Parsing</span>
+                <span class="bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-300" id="tag3">Client-Side Utilities</span>
             </div>
         </section>
 
@@ -468,8 +444,8 @@
 
     <!-- Footer (Consistently Blue/Dark in Both Modes) -->
     <footer class="bg-slate-900 text-slate-400 mt-auto border-t border-slate-800">  
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-center md:text-left">
-            <div class="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-3">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+            <div class="flex items-center space-x-3">
                 <span class="font-extrabold text-white text-base">Qani</span>
                 <span>&copy; 2026 Qani Security Suite. All rights reserved.</span>
             </div>
@@ -492,9 +468,7 @@
             const body = document.getElementById('appBody');
             const header = document.getElementById('appHeader');
             const themeText = document.getElementById('themeText');
-            const themeTextMobile = document.getElementById('themeTextMobile');
             const themeToggleBtn = document.getElementById('themeToggleBtn');
-            const themeToggleBtnMobile = document.getElementById('themeToggleBtnMobile');
             const searchInput = document.getElementById('searchInput');
             const divider1 = document.getElementById('divider1');
             const divider2 = document.getElementById('divider2');
@@ -516,20 +490,16 @@
                 body.className = "bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-200";
                 header.className = "sticky top-0 z-50 bg-slate-900 border-b border-slate-800 transition-colors duration-200";
                 searchInput.className = "w-full bg-slate-800 border border-slate-700 text-white rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-slate-500 transition-colors";
-                themeToggleBtn.className = "hidden md:block p-2 rounded-lg text-slate-300 font-bold text-xs uppercase tracking-wider";
-                if (themeToggleBtnMobile) {
-                    themeToggleBtnMobile.className = "p-1.5 rounded-lg text-slate-300 font-bold text-[10px] uppercase tracking-wider hover:bg-slate-800 transition-colors";
-                }
+                themeToggleBtn.className = "p-2 rounded-lg text-slate-300 font-bold text-xs uppercase tracking-wider";
 
-                divider1.className = "border-slate-800 my-6 sm:my-8 transition-colors duration-200";
-                divider2.className = "border-slate-800 my-6 sm:my-8 transition-colors duration-200";
-                aboutHeading.className = "text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight";
-                aboutText.className = "text-slate-400 text-xs sm:text-sm md:text-base leading-relaxed";
+                divider1.className = "border-slate-800 my-8 transition-colors duration-200";
+                divider2.className = "border-slate-800 my-8 transition-colors duration-200";
+                aboutHeading.className = "text-xl md:text-2xl font-bold text-white tracking-tight";
+                aboutText.className = "text-slate-400 text-sm md:text-base leading-relaxed";
                 themeText.innerText = "LIGHT MODE";
-                if (themeTextMobile) themeTextMobile.innerText = "LIGHT";
 
                 navBtns.forEach(btn => {
-                    btn.className = "nav-btn flex items-center space-x-1 px-2.5 sm:px-3 py-1.5 rounded-lg hover:bg-slate-800 hover:text-white transition-colors text-slate-300 text-xs sm:text-sm";
+                    btn.className = "nav-btn flex items-center space-x-1 px-3 py-1.5 rounded-lg hover:bg-slate-800 hover:text-white transition-colors text-slate-300";
                 });
                 dropdownMenus.forEach(menu => {
                     menu.className = "dropdown-menu absolute left-0 w-48 bg-slate-800 border border-slate-700 rounded-xl shadow-lg hidden group-hover:block z-50 p-2 space-y-1 text-slate-200";
@@ -542,13 +512,13 @@
                 });
 
                 metrics.forEach(id => {
-                    document.getElementById(id).className = "card p-4 sm:p-5 rounded-xl bg-slate-800/80 border border-slate-700 transition-colors";
+                    document.getElementById(id).className = "card p-5 rounded-xl bg-slate-800/80 border border-slate-700 transition-colors";
                 });
                 metricVals.forEach(id => {
-                    document.getElementById(id).className = "text-xl sm:text-2xl md:text-3xl font-extrabold mt-1.5 sm:mt-2 text-white";
+                    document.getElementById(id).className = "text-2xl md:text-3xl font-extrabold mt-2 text-white";
                 });
                 tags.forEach(id => {
-                    document.getElementById(id).className = "bg-slate-800 px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-700 text-slate-400";
+                    document.getElementById(id).className = "bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 text-slate-400";
                 });
 
             } else {
@@ -557,20 +527,16 @@
                 body.className = "bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col transition-colors duration-200";
                 header.className = "sticky top-0 z-50 bg-white border-b border-slate-200 transition-colors duration-200";
                 searchInput.className = "w-full bg-slate-100 border border-slate-300 text-slate-800 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-slate-400 transition-colors";
-                themeToggleBtn.className = "hidden md:block p-2 rounded-lg text-slate-600 font-bold text-xs uppercase tracking-wider";
-                if (themeToggleBtnMobile) {
-                    themeToggleBtnMobile.className = "p-1.5 rounded-lg text-slate-600 font-bold text-[10px] uppercase tracking-wider hover:bg-slate-100 transition-colors";
-                }
+                themeToggleBtn.className = "p-2 rounded-lg text-slate-600 font-bold text-xs uppercase tracking-wider";
 
-                divider1.className = "border-slate-200 my-6 sm:my-8 transition-colors duration-200";
-                divider2.className = "border-slate-200 my-6 sm:my-8 transition-colors duration-200";
-                aboutHeading.className = "text-lg sm:text-xl md:text-2xl font-bold text-slate-900 tracking-tight";
-                aboutText.className = "text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed";
+                divider1.className = "border-slate-200 my-8 transition-colors duration-200";
+                divider2.className = "border-slate-200 my-8 transition-colors duration-200";
+                aboutHeading.className = "text-xl md:text-2xl font-bold text-slate-900 tracking-tight";
+                aboutText.className = "text-slate-600 text-sm md:text-base leading-relaxed";
                 themeText.innerText = "DARK MODE";
-                if (themeTextMobile) themeTextMobile.innerText = "DARK";
 
                 navBtns.forEach(btn => {
-                    btn.className = "nav-btn flex items-center space-x-1 px-2.5 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600 text-xs sm:text-sm";
+                    btn.className = "nav-btn flex items-center space-x-1 px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors text-slate-600";
                 });
                 dropdownMenus.forEach(menu => {
                     menu.className = "dropdown-menu absolute left-0 w-48 bg-white border border-slate-200 rounded-xl shadow-lg hidden group-hover:block z-50 p-2 space-y-1 text-slate-700";
@@ -583,13 +549,13 @@
                 });
 
                 metrics.forEach(id => {
-                    document.getElementById(id).className = "card p-4 sm:p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm";
+                    document.getElementById(id).className = "card p-5 rounded-xl bg-white border border-slate-200 transition-colors shadow-sm";
                 });
                 metricVals.forEach(id => {
-                    document.getElementById(id).className = "text-xl sm:text-2xl md:text-3xl font-extrabold mt-1.5 sm:mt-2 text-slate-900";
+                    document.getElementById(id).className = "text-2xl md:text-3xl font-extrabold mt-2 text-slate-900";
                 });
                 tags.forEach(id => {
-                    document.getElementById(id).className = "bg-slate-200 px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-300 text-slate-700";
+                    document.getElementById(id).className = "bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-300 text-slate-700";
                 });
             }
 
@@ -632,9 +598,9 @@
             const dots = document.getElementById('dotsContainer').children;
             for (let i = 0; i < dots.length; i++) {
                 if (i === currentSlide) {
-                    dots[i].className = "w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white transition-all";
+                    dots[i].className = "w-3 h-3 rounded-full bg-white transition-all";
                 } else {
-                    dots[i].className = "w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-slate-700 transition-all";
+                    dots[i].className = "w-3 h-3 rounded-full bg-slate-700 transition-all";
                 }
             }
         }
