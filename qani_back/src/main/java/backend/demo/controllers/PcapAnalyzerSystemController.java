@@ -13,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1/pcap-analyzer-system")
 @Tag(name = "PCAP Packet Analyzer System API", description = "Upload PCAP/PCAPNG capture files for network protocol breakdown, IP statistics, and anomaly reports")
